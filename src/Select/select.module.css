@@ -1,0 +1,12 @@
+.items{
+ border: 1px solid  black ;
+    max-width: 70px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.items:hover{
+    background: #e7dfdf;
+    cursor: pointer;
+    max-width: 75px;
+}
