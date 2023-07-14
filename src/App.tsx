@@ -6,6 +6,7 @@ import {Select} from "./Select/Select";
 import {log} from "util";
 import FormControl from "@mui/material/FormControl";
 import SelectAutoWidth from "./Select/SelectMUI";
+import {SimpleExample} from "./mystories/useEffect.stories";
 
 function App() {
     const users = [{id: 1,title:'Oleg'},{id: 2,title:'Ivan'},{id: 3,title:'Sarafan'}]
@@ -16,6 +17,7 @@ function App() {
         <UncontrolledAccordion title={'Menu'}/>
         {/*<Select value={'Menu'} items={users}/>*/}
         {/*<SelectAutoWidth value={'Name'} items={users}/>*/}
+        <SimpleExample/>
     </div>
   );
 }
