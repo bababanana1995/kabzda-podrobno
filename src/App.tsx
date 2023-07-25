@@ -7,6 +7,7 @@ import {log} from "util";
 import FormControl from "@mui/material/FormControl";
 import SelectAutoWidth from "./Select/SelectMUI";
 import {SimpleExample} from "./mystories/useEffect.stories";
+import {Clock} from "./components/Clock/Clock";
 
 function App() {
     const users = [{id: 1,title:'Oleg'},{id: 2,title:'Ivan'},{id: 3,title:'Sarafan'}]
@@ -14,10 +15,11 @@ function App() {
     <div className="App">
 {/*<UncontrolledAccordion title={'menu'}/>*/}
         {/*<Select value={'Menu'} onChange={()=>console.log('1')} items={users}/>*/}
-        <UncontrolledAccordion title={'Menu'}/>
+        {/*<UncontrolledAccordion title={'Menu'}/>*/}
         {/*<Select value={'Menu'} items={users}/>*/}
         {/*<SelectAutoWidth value={'Name'} items={users}/>*/}
-        <SimpleExample/>
+        {/*<SimpleExample/>*/}
+        <Clock/>
     </div>
   );
 }

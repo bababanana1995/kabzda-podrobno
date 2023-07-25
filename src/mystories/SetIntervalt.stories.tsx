@@ -9,9 +9,10 @@ const generateData=()=>{
 }
 export const SetIntervalExample=()=>{
     console.log('SetTimeOutExample')
-    const [seconds,setSeconds] = useState(0)
-    const [minutes,setMinutes] = useState(0)
-    const [hours,setHours] = useState(0)
+    const [seconds,setSeconds] = useState(new Date().getSeconds())
+    const [minutes,setMinutes] = useState(new Date().getMinutes())
+    const [hours,setHours] = useState(new Date().getHours())
+    const settingLengthForClock = (num:number)=>num<10?`0${num}`:num
 
     useEffect(()=>{
 setInterval(()=>{
@@ -31,7 +32,7 @@ setInterval(()=>{
     }
     return <>
         {/*Hello,*/}
-        {`${hours}:${minutes}:${seconds}`}
+        {`${settingLengthForClock(hours)}:${settingLengthForClock(minutes)}:${settingLengthForClock(seconds)}`}
         {/*<button onClick={()=>setCounter(counter+1)}>+</button>*/}
     </>
 
