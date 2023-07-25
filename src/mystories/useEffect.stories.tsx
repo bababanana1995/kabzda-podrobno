@@ -34,3 +34,35 @@ useEffect(()=>{
     </>
 
 }
+export const ResetEffectExample =()=>{
+    const [counter,setCounter] = useState(generateData)
+    useEffect(()=>{
+        console.log('Effect occurred: ' + counter)
+        return ()=>{
+            console.log('Effect Reset')
+        }
+    },[counter])
+return <>
+    counter : {counter}
+    <button onClick={()=>setCounter(counter+1)}>+</button>
+</>
+}
+export const KeyTrackerExample =()=>{
+    const [text,setText] = useState('')
+    console.log('component render with ' + text)
+    useEffect(()=>{
+const handler =  (e:KeyboardEvent)=> {
+    console.log(e.key)
+    setText(text + e.key)
+}
+window.addEventListener('keypress', handler)
+    return () => {
+        window.removeEventListener('keypress',handler)
+    }
+
+    },[text])
+return <>
+    <input type={text}></input>
+    <div>text : {text}</div>
+</>
+}

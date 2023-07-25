@@ -11,9 +11,9 @@ export const Clock = (props: ClockPropsType) => {
 
     useEffect(() => {
         const intervalID = setInterval(() => {
-            console.log('TICK')
             setDate(new Date())
         }, 1000)
+        return clearInterval(intervalID)
     }, [])
     let view
     switch (props.mode) {
